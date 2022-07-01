@@ -5,4 +5,4 @@ spring:
     username: guest
     password: guest
 
-  port: 8082
+#  port: 8082

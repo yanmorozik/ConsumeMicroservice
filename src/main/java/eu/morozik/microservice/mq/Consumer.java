@@ -7,8 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 public class Consumer {
-    @RabbitListener(queues = "queue")
-    public void consume(String msg){
-        log.info("Consume: "+ msg);
+    public static final String QUEUE = "queue";
+
+    @RabbitListener(queues = QUEUE)
+    public void consume(String msg) {
+        log.info("Consume: " + msg);
     }
 }
